@@ -9,7 +9,7 @@ const App = () => {
 
   const servercall = async () => {
     console.log("entered in servercall");
-    const res = await fetch("", {
+    const res = await fetch("https://insta-gift.onrender.com/api/v1/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
